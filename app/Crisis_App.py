@@ -17,7 +17,10 @@ bloodgrp = st.selectbox('Blood group', ['A+', 'A-', 'B+', 'B-', "AB+", "AB-", "O
 
 Medical_History = st.text_input('Any Medical History of Concern')
 
-states = pd.read_csv(r"C:\Users\anshi\Desktop\crisis app\app\states.csv")
+from pathlib import Path
+
+# states_csv = Path(__file__).parents[1] / 'GarretBurhennData/Garret_Burhenn_Pitches.csv'
+states_csv = pd.read_csv(r"C:\Users\anshi\Desktop\crisis app\app\states.csv")
 state = st.multiselect('Select State', states)
 
 if st.button('Next Page'):
