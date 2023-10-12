@@ -21,7 +21,7 @@ from pathlib import Path
 
 # states_csv = Path(__file__).parents[1] / 'GarretBurhennData/Garret_Burhenn_Pitches.csv'
 states_csv = pd.read_csv(r"C:\Users\anshi\Desktop\crisis_app\app\states.csv")
-state = st.multiselect('Select State', states)
+state = st.multiselect('Select State', states_csv)
 
 if st.button('Next Page'):
     switch_page('Crisis_Alert')
