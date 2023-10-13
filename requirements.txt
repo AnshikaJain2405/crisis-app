@@ -7,3 +7,4 @@ google-auth-oauthlib==1.1.0
 gspread==5.11.3
 numpy==1.25.2
 pandas==1.5.3
+streamlit-chat==0.1.1
