@@ -2,6 +2,7 @@ import streamlit as st
 import datetime as dt
 import pandas as pd
 from streamlit_extras.switch_page_button import switch_page
+import os
 
 st.title('Personal Information')
 
@@ -19,8 +20,9 @@ Medical_History = st.text_input('Any Medical History of Concern')
 
 from pathlib import Path
 
+states_csv = open(r"C:\Users\anshi\Desktop\crisis app\app\states.csv")
 # states_csv = Path(__file__).parents[1] / 'GarretBurhennData/Garret_Burhenn_Pitches.csv'
-states_csv = pd.read_csv(r"C:\Users\anshi\Desktop\crisis app\app\states.csv")
+# states_csv = pd.read_csv(r"")
 state = st.multiselect('Select State', states_csv)
 
 if st.button('Next Page'):
