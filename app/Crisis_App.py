@@ -18,16 +18,21 @@ bloodgrp = st.selectbox('Blood group', ['A+', 'A-', 'B+', 'B-', "AB+", "AB-", "O
 
 Medical_History = st.text_input('Any Medical History of Concern')
 
-from pathlib import Path
+Emergency_contact = st.number_input('Contact information of Relatives to be contacted in case of accident', 0)
 
-states_csv = open(r'C:\Users\anshi\Desktop\crisis app\app\states.csv')
-# states_csv = Path(__file__).parents[1] / 'states.csv'
-# states_csv = pd.read_csv(r"")
-state = st.multiselect('Select State', states_csv)
+# from pathlib import Path
 
-if st.button('Next Page'):
-    switch_page('Crisis_Alert')
+# states_csv = open(r'C:\Users\anshi\Desktop\crisis app\app\states.csv')
+# # states_csv = Path(__file__).parents[1] / 'states.csv'
+# # states_csv = pd.read_csv(r"")
+# state = st.multiselect('Select State', states_csv)
 
-if st.button('Help'):
-    switch_page('Help')
-    
+col1, col2, col3, col4 = st.columns([1,1,1,1])
+
+with col4:
+    if st.button('Next Page'):
+        switch_page('Crisis_Alert')
+
+with col3:
+    if st.button('Help'):
+        switch_page('Help')
